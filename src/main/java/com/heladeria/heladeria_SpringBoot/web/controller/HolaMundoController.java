@@ -1,4 +1,4 @@
-package com.heladeria.heladeria_SpringBoot;
+package com.heladeria.heladeria_SpringBoot.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
