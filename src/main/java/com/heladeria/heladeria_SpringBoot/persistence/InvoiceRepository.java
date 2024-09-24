@@ -17,7 +17,7 @@ public class InvoiceRepository {
     }
 
     public Invoice save(Invoice invoice){
-        return invoiceCrudRepository.save(invoice)
+        return invoiceCrudRepository.save(invoice);
     }
 
     public Optional<Invoice> findById(int id){
