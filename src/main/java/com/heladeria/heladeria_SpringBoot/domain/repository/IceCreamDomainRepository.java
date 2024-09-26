@@ -11,6 +11,6 @@ public interface IceCreamDomainRepository {
     IceCreamDomain save(IceCreamDomain iceCreamDomain);
     Optional<IceCreamDomain> findById(int id);
     void deleteById(int id);
-    List<IceCreamDomain> findByName(String name);
-    List<IceCreamDomain> findByStockLessThan(Integer stock);
+    Optional<List<IceCreamDomain>> findByName(String name);
+    Optional<List<IceCreamDomain>> findByStockLessThan(Integer stock);
 }

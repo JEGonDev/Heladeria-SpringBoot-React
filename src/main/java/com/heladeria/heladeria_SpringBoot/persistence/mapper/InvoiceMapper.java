@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring", uses = {EmployeeMapper.class})
 public interface InvoiceMapper {
     @Mappings({
@@ -15,9 +17,10 @@ public interface InvoiceMapper {
             @Mapping(source = "total", target = "total"),
             @Mapping(source = "employee", target = "employeeDomain")
     })
-    InvoiceDomain toInvoiceDomain(Invoice invoice);
+    InvoiceDomain toInvoice(Invoice invoice);
+    List<InvoiceDomain> toInvoice(List<Invoice> invoices);
 
     @InheritInverseConfiguration
     @Mapping(target = "invoiceDetails" , ignore = true)
-    Invoice toInvoice(InvoiceDomain invoiceDomain);
+    Invoice toInvoiceDomain(InvoiceDomain invoiceDomain);
 }

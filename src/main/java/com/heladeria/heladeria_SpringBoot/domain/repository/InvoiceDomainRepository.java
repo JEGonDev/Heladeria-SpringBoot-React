@@ -11,7 +11,6 @@ public interface InvoiceDomainRepository {
     InvoiceDomain save(InvoiceDomain invoiceDomain);
     Optional<InvoiceDomain> findById(int id);
     void deleteById(int id);
-    List<InvoiceDomain> findByEmployeeId(Integer employeeId);
-    List<InvoiceDomain> findByDate(String date);
-    List<InvoiceDomain> findByTotalGreaterThan(Double total);
+    Optional<List<InvoiceDomain>> findByDate(String date);
+    Optional<List<InvoiceDomain>> findByTotalGreaterThan(Double total);
 }

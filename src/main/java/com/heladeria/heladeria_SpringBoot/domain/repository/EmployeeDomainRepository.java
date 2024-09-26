@@ -10,6 +10,6 @@ public interface EmployeeDomainRepository {
     Optional<EmployeeDomain> findById(int id);
     EmployeeDomain save(EmployeeDomain employeeDomain);
     void deleteById(int id);
-    List<EmployeeDomain> findByName(String name);
-    List<EmployeeDomain> findByPosition(String position);
+    Optional<List<EmployeeDomain>> findByName(String name);
+    Optional<List<EmployeeDomain>> findByPosition(String position);
 }

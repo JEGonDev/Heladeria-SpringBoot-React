@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface IceCreamMapper {
     @Mappings({
@@ -15,9 +17,10 @@ public interface IceCreamMapper {
             @Mapping(source = "price", target = "price"),
             @Mapping(source = "stock", target = "stock")
     })
-    IceCreamDomain toIceCreamDomain(IceCream iceCream);
+    IceCreamDomain toIceCream(IceCream iceCream);
+    List<IceCreamDomain> toIceCream(List<IceCream> iceCreams);
 
     @InheritInverseConfiguration
     @Mapping(target = "invoiceDetails", ignore = true)
-    IceCream toIceCream(IceCreamDomain iceCreamDomain);
+    IceCream toIceCreamDomain(IceCreamDomain iceCreamDomain);
 }
