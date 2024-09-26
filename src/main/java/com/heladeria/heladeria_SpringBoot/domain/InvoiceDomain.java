@@ -11,6 +11,5 @@ public class InvoiceDomain {
     private Double total;
 
     // Relation
-    private EmployeeDomain employee;
-    private List<InvoiceDetailDomain> invoiceDetails;
+    private EmployeeDomain employeeDomain;
 }

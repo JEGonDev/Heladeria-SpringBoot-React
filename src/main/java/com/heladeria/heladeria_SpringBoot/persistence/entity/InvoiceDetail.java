@@ -11,7 +11,7 @@ public class InvoiceDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "invoice_detail_id")
-    private Integer id;
+    private Integer invoiceDetailID;
 
     @Column(name = "quantity")
     private Integer quantity;

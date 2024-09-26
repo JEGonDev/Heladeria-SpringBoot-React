@@ -10,7 +10,4 @@ public class IceCreamDomain {
     private String name;
     private Double price;
     private Integer stock;
-
-    // Relation
-    private List<InvoiceDetailDomain> invoiceDetails;
 }

@@ -9,6 +9,6 @@ public class InvoiceDetailDomain {
     private Double subtotal;
 
     // Relations
-    private InvoiceDomain invoice;
-    private IceCreamDomain iceCream;
+    private InvoiceDomain invoiceDomain;
+    private IceCreamDomain iceCreamDomain;
 }

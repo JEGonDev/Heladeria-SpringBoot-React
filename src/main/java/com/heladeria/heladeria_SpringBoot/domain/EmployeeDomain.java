@@ -10,7 +10,4 @@ public class EmployeeDomain {
     private String name;
     private String position;
     private Double salary;
-
-    // Relation
-    private List<InvoiceDomain> invoices;
 }
