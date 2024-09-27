@@ -25,25 +25,19 @@ public class InvoiceDetailController {
 
     // Obtener detalle de factura por id
     @GetMapping("/getById/{id}")
-    public ResponseEntity<InvoiceDetailDomain> getById(@PathVariable("id") int id) {
-        return invoiceDetailService.getInvoiceDetailById(id)
-                .map(detail -> new ResponseEntity<>(detail, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    public Optional<InvoiceDetailDomain> getById(@PathVariable("id") int id) {
+        return invoiceDetailService.getInvoiceDetailById(id);
     }
 
     // Guardar un nuevo detalle de factura
     @PostMapping("/save")
-    public ResponseEntity<InvoiceDetailDomain> save(@RequestBody InvoiceDetailDomain invoiceDetailDomain) {
-        return new ResponseEntity<>(invoiceDetailService.save(invoiceDetailDomain), HttpStatus.CREATED);
+    public InvoiceDetailDomain save(@RequestBody InvoiceDetailDomain invoiceDetailDomain) {
+        return invoiceDetailService.save(invoiceDetailDomain);
     }
 
     // Eliminar detalle de factura por id
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") int id) {
-        if (invoiceDetailService.deleteById(id)) {
-            return new ResponseEntity<>(HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    public boolean delete(@PathVariable("id") int id) {
+        return invoiceDetailService.deleteById(id);
     }
 }
