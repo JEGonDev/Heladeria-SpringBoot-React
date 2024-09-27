@@ -1,13 +1,13 @@
 package com.heladeria.heladeria_SpringBoot.persistence.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+// import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Table(name = "Invoice")
-@Data
+// @Data
 public class Invoice {
 
     @Id
@@ -28,4 +28,44 @@ public class Invoice {
 
     @OneToMany(mappedBy = "invoice")
     private List<InvoiceDetail> invoiceDetails;
+
+    public Integer getInvoiceID() {
+        return invoiceID;
+    }
+
+    public void setInvoiceID(Integer invoiceID) {
+        this.invoiceID = invoiceID;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public List<InvoiceDetail> getInvoiceDetails() {
+        return invoiceDetails;
+    }
+
+    public void setInvoiceDetails(List<InvoiceDetail> invoiceDetails) {
+        this.invoiceDetails = invoiceDetails;
+    }
 }

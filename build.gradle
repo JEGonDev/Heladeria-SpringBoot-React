@@ -24,8 +24,8 @@ dependencies {
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
 
 	// Lombok
-	compileOnly 'org.projectlombok:lombok:1.18.34'
-	annotationProcessor 'org.projectlombok:lombok:1.18.34'
+	// implementation 'org.projectlombok:lombok:1.18.34'
+	// annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
 	// MySQL Connector
 	runtimeOnly 'com.mysql:mysql-connector-j'
