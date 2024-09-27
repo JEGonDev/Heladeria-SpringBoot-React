@@ -24,6 +24,9 @@ public class IceCream {
     @Column(name = "stock")
     private Integer stock;
 
+    @Column(name = "img_url")
+    private String imgURL;
+
     // Relation
     @OneToMany(mappedBy = "iceCream")
     private List<InvoiceDetail> invoiceDetails;
@@ -66,5 +69,13 @@ public class IceCream {
 
     public void setInvoiceDetails(List<InvoiceDetail> invoiceDetails) {
         this.invoiceDetails = invoiceDetails;
+    }
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 }

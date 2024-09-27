@@ -15,7 +15,8 @@ public interface IceCreamMapper {
             @Mapping(source = "iceCreamID", target = "id"),
             @Mapping(source = "name", target = "name"),
             @Mapping(source = "price", target = "price"),
-            @Mapping(source = "stock", target = "stock")
+            @Mapping(source = "stock", target = "stock"),
+            @Mapping(source = "imgURL", target = "imgURL")
     })
     IceCreamDomain toIceCream(IceCream iceCream);
     List<IceCreamDomain> toIceCream(List<IceCream> iceCreams);

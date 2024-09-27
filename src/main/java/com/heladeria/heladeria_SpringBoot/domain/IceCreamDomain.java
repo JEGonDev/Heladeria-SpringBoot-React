@@ -10,6 +10,7 @@ public class IceCreamDomain {
     private String name;
     private Double price;
     private Integer stock;
+    private String imgURL;
 
     public Integer getId() {
         return id;
@@ -41,5 +42,13 @@ public class IceCreamDomain {
 
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 }
