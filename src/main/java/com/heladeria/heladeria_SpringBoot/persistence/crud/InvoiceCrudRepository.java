@@ -7,8 +7,6 @@ import java.util.List;
 
 public interface InvoiceCrudRepository extends CrudRepository<Invoice, Integer> {
     //Query methods
-    // Buscar facturas por un empleado específico
-    List<Invoice> findByEmployeeId(Integer employeeId);
 
     // Buscar facturas por fecha
     List<Invoice> findByDate(String date);
